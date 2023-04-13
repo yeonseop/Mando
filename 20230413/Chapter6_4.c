@@ -13,7 +13,6 @@ int main(void)
     srand((unsigned)time(NULL));
     int pc_select = rand() % 3 + 1;
 
-
     printf("선택하시오 ( 1 : 가위   2 : 바위   3 : 보  ) ");
     scanf("%d", &select);
 
@@ -61,6 +60,5 @@ int main(void)
     else {
         printf("1~3사이의 숫자를 입력해주세요.");
     }
-
     return 0;
 }
