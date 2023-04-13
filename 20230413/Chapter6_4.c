@@ -17,31 +17,33 @@ int main(void)
     printf("선택하시오 ( 1 : 가위   2 : 바위   3 : 보  ) ");
     scanf("%d", &select);
 
-    switch (pc_select)
+    if (select >= 1 && select <= 3) 
     {
-    case 1:
-        printf("컴퓨터의 선택 : 가위\n");
-        break;
-    case 2:
-        printf("컴퓨터의 선택 : 바위\n");
-        break;
-    case 3:
-        printf("컴퓨터의 선택 : 보\n");
-        break;
-    }
-    switch (select)
-    {
-    case 1:
-        printf("사용자의 선택 : 가위\n");
-        break;
-    case 2:
-        printf("사용자의 선택 : 바위\n");
-        break;
-    case 3:
-        printf("사용자의 선택 : 보\n");
-        break;
-    }
-    if (select >= 1 && select <= 3) {
+        switch (pc_select)
+        {
+        case 1:
+            printf("컴퓨터의 선택 : 가위\n");
+            break;
+        case 2:
+            printf("컴퓨터의 선택 : 바위\n");
+            break;
+        case 3:
+            printf("컴퓨터의 선택 : 보\n");
+            break;
+        }
+
+        switch (select)
+        {
+        case 1:
+            printf("사용자의 선택 : 가위\n");
+            break;
+        case 2:
+            printf("사용자의 선택 : 바위\n");
+            break;
+        case 3:
+            printf("사용자의 선택 : 보\n");
+            break;
+        }
 
         if (select == pc_select)
         {
