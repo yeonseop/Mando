@@ -1,6 +1,6 @@
 /*
-04 ÄÄÇ»ÅÍ¿Í °¡À§, ¹ÙÀ§, º¸ °ÔÀÓÀ» ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó. ÄÄÇ»ÅÍ´Â »ç¿ëÀÚ¿¡°Ô ¾Ë¸®Áö ¾Ê°í °¡À§, ¹ÙÀ§, º¸ Áß¿¡¼­ ÀÓÀÇ·Î ÇÏ³ª¸¦ ¼±ÅÃÇÑ´Ù.
-»ç¿ëÀÚ´Â ÇÁ·Î±×·¥ÀÇ ÀÔ·Â ¾È³» ¸Þ¼¼Áö¿¡ µû¶ó¼­, 3°³ Áß¿¡¼­ ÇÏ³ª¸¦ ¼±ÅÃÇÏ°Ô µÈ´Ù. »ç¿ëÀÚÀÇ ¼±ÅÃÀÌ ³¡³ª¸é ÄÄÇ»ÅÍ´Â ´©°¡°¡ ¹«¾ùÀ» ¼±ÅÃÇÏ¿´°í ´©°¡ ÀÌ°å´ÂÁö, ºñ°å´ÂÁö¸¦ ¾Ë·ÁÁØ´Ù.
+04 ì»´í“¨í„°ì™€ ê°€ìœ„, ë°”ìœ„, ë³´ ê²Œìž„ì„ í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ë¼. ì»´í“¨í„°ëŠ” ì‚¬ìš©ìžì—ê²Œ ì•Œë¦¬ì§€ ì•Šê³  ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ì—ì„œ ìž„ì˜ë¡œ í•˜ë‚˜ë¥¼ ì„ íƒí•œë‹¤.
+ì‚¬ìš©ìžëŠ” í”„ë¡œê·¸ëž¨ì˜ ìž…ë ¥ ì•ˆë‚´ ë©”ì„¸ì§€ì— ë”°ë¼ì„œ, 3ê°œ ì¤‘ì—ì„œ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ê²Œ ëœë‹¤. ì‚¬ìš©ìžì˜ ì„ íƒì´ ëë‚˜ë©´ ì»´í“¨í„°ëŠ” ëˆ„ê°€ê°€ ë¬´ì—‡ì„ ì„ íƒí•˜ì˜€ê³  ëˆ„ê°€ ì´ê²¼ëŠ”ì§€, ë¹„ê²¼ëŠ”ì§€ë¥¼ ì•Œë ¤ì¤€ë‹¤.
 */
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -13,58 +13,35 @@ int main(void)
     int pc_select = (rand() % 3 + 1);
     
 
-    printf("¼±ÅÃÇÏ½Ã¿À ( 1 : °¡À§   2 : ¹ÙÀ§   3 : º¸  ) ");
+    printf("ì„ íƒí•˜ì‹œì˜¤ ( 1 : ê°€ìœ„   2 : ë°”ìœ„   3 : ë³´  ) ");
     scanf("%d", &select);
+
+    switch (pc_select)
+    {
+    case 1:
+        printf("ì»´í“¨í„°ì˜ ì„ íƒ : ê°€ìœ„\n");
+        break;
+    case 2:
+        printf("ì»´í“¨í„°ì˜ ì„ íƒ : ë°”ìœ„\n");
+        break;
+    case 3:
+        printf("ì»´í“¨í„°ì˜ ì„ íƒ : ë³´\n");
+        break;
+    }
 
     if (select == pc_select)
     {
-        switch (pc_select)
-        {
-        case 1:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : °¡À§\n");
-            break;
-        case 2:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : ¹ÙÀ§\n");
-            break;
-        case 3:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : º¸\n");
-            break;
-        }
-        printf("ºñ°åÀ½");
+        printf("ë¹„ê²¼ìŒ");
     }
 
     else if ((select == 1 && pc_select == 2) || (select == 2 && pc_select == 3) || (select == 3 && pc_select == 1))
     {
-        switch (pc_select)
-        {
-        case 1:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : °¡À§\n");
-            break;
-        case 2:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : ¹ÙÀ§\n");
-            break;
-        case 3:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : º¸\n");
-            break;
-        }
-        printf("ÄÄÇ»ÅÍ°¡ ÀÌ°åÀ½");
+        printf("ì»´í“¨í„°ê°€ ì´ê²¼ìŒ");
     }
 
     else
     {
-        switch (pc_select)
-        {
-        case 1:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : °¡À§\n");
-            break;
-        case 2:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : ¹ÙÀ§\n");
-            break;
-        case 3:
-            printf("ÄÄÇ»ÅÍÀÇ ¼±ÅÃ : º¸\n");
-            break;
-        }
-        printf("»ç¿ëÀÚ°¡ ÀÌ°åÀ½");
+        printf("ì‚¬ìš©ìžê°€ ì´ê²¼ìŒ");
     }
 
     return 0;
