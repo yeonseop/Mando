@@ -3,24 +3,22 @@
 
 int main() {
     for (int i = 1; i <= 6; i++) {
-        for (int j = 1; j <= 6; j++) {
+        for (int j = i; j <= 6; j++) {
             if (i + j == 6) {
                 if (i > j) {
                     continue;
                 }
-                printf("ÁÖ»çÀ§ 2°³ÀÇ ÇÕÀÌ 6ÀÌ ³ª¿À´Â °æ¿ì´Â (%d, %d)\n", i, j);
+                printf("ì£¼ì‚¬ìœ„ 2ê°œì˜ í•©ì´ 6ì´ ë‚˜ì˜¤ëŠ” ê²½ìš°ëŠ” (%d, %d)\n", i, j);
             }
         }
     }
+    printf("\n");
 
     for (int i = 1; i <= 6; i++) {
-        for (int j = 1; j <= 6; j++) {
-            for (int k = 1; k <= 6; k++) {
+        for (int j = i; j <= 6; j++) {
+            for (int k = j; k <= 6; k++) {
                 if (i + j + k == 10) {
-                    if ((i < j)&&(i < k)) {
-                            continue;
-                    }
-                    printf("ÁÖ»çÀ§ 3°³ÀÇ ÇÕÀÌ 10ÀÌ ³ª¿À´Â °æ¿ì´Â (%d, %d, %d)\n", i, j, k);
+                    printf("ì£¼ì‚¬ìœ„ 3ê°œì˜ í•©ì´ 10ì´ ë‚˜ì˜¤ëŠ” ê²½ìš°ëŠ” (%d, %d, %d)\n", i, j, k);
                 }
             }
         }
